@@ -1,0 +1,31 @@
+<html>
+<body>
+    <textarea id="text"></textarea>
+    <div id="result"></div>
+</body>
+<script>
+    var char, words,lines;
+    function wordCount( value ){
+        char = value.replace(/\s+g/,'').length;
+
+        var wom = value.match(/\S+/g);
+        words = wom ? wom.length: 0 ;
+
+        lines = value.split(/\r*\n/).length;
+    }
+
+    var textarea = document.getElementById("text");
+    var result   = document.getElementById("result");
+
+    textarea.onkeyup = function(){
+        wordCount(this.value);
+        result.innerHTML = (
+            "<br>Characters:  "+ char +
+            "<br>Words: "+ words +
+            "<br>Lines: "+ lines
+        );
+    };
+
+
+</script>
+</html>

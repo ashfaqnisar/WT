@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Capital</title>
+</head>
+<body>
+    <select id="countries" onchange="dropdownChange(this)" required>
+        <option value="" selected>Default</option>
+        <option value="Delhi">India</option>
+        <option value="New York">USA</option>
+        <option value="Calfornia">Cannada</option>
+    </select>
+    Result:<span id="capital"></span>
+</body>
+<script>
+    function dropdownChange(dropdown) {
+        var selectedValue = dropdown.options[dropdown.selectedIndex].value;
+        document.getElementById("capital").innerHTML = selectedValue;
+    }
+</script>
+</html>

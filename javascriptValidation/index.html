@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation</title>
+    <script src="validation.js"></script>
+
+</head>
+<body>
+    <form onsubmit="return formValidation();" name="validation">
+        Name:<input id="name" type="text">
+        <br>
+        Email:<input id="email" type="text">
+        <br>
+        Address: <textarea rows="5" id="address" cols="5" required></textarea>
+        <br>
+        Year:
+        <select id="year" required>
+            <<option value="-1" selected>Default</option>
+            <option value="1">First Year</option>
+            <option value="2">Second Year</option>
+            <option value="3">Third Year</option>
+            <option value="4">Fourth Year</option>
+        </select>
+        Sex:<input type="radio" id="sex">Male
+        <input type="radio" id="sex2">Female
+
+        <button onclick="Submit">Submit</button>
+    </form>
+</body>
+</html>
